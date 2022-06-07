@@ -1,53 +1,13 @@
-# Description
+# What is Ckb Wallet SDK?
 
-Peersyst typescrypt wallet sdk to connect with nervos network
+Ckb Wallet SDK is a software development kit in TypeScript for Ckb specially focused in wallets. This means that the functionalities are thought to be used for a specific wallet. Nonetheless, there is no problem in creating multiple wallets of multiple networks using this sdk.
 
-## Examples
+For each wallet you will be able to easily find all transactions, get your addresses, sign and create ckb transactions as well as interact with the DAO and get ckb, tokens (NRC20 and NRC721) and DAO balances.
 
-In the folder example you can find examples on how to use the sdk.
+{% hint style="info" %}
+Ckb wallet sdk is an ongoing project. There will be new versions and functionalities as we keep evolving.
+{% endhint %}
 
-To run any example use:
-```
-npm run example --name=wallet-balance
-```
-
-Where _wallet-balance_ can be any other example file name (import-wallet, create-wallet, get-transactions...)
-
-## Installation
-- To install the package with yarn use:
-```
-yarn add git+https://github.com/Peersyst/ckb-wallet-sdk#1.0.0
-```
-- To install the package with npm use:
-```
-npm install --save git+https://github.com/Peersyst/ckb-wallet-sdk#1.0.0
-```
-You can change the version changing what comes after #
-
-## Usage
-1. Instantiate connection service:
-```typescrypt
-import { ConnectionService, Environments, WalletService, Logger } from "@peersyst/ckb-wallet-sdk";
-
-const ckbUrl = "YourMainNodeRpcUrl";
-const indexerUrl = "YourMainNodeIndexerUrl";
-const connectionService = new ConnectionService(ckbUrl, indexerUrl, Environments.Mainnet);
-```
-2. Instantiate wallet service:
-```typescrypt
-// To create mnemonic if you do not have one:
-const mnemonic = WalletService.createNewMnemonic();
-const wallet = new WalletService(connectionService, mnemonic);
-```
-3. Refresh wallet data:
-```typescrypt
-await wallet.synchronize();
-```
-4. Make any call from the wallet:
-```typescrypt
-const totalBalance = await wallet.getBalance();
-Logger.info(totalBalance);
-
-const amount = BigInt(500 * 10 ** 8);
-const txHash = await wallet.depositInDAO(amount, mnemonic);
-```
+{% hint style="info" %}
+Our sdk is free to use and also to collaborate! We will review and accept new functionalities. Do not hesitate in collaborating if you did not find your functionality in the docs.
+{% endhint %}
