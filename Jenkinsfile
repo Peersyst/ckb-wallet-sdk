@@ -41,6 +41,7 @@ pipeline {
                 branch 'main'
             }
             steps {
+                sh 'echo \'//registry.npmjs.org/:_authToken=${NPM_TOKEN}\' > .npmrc'
                 withCredentials([string(credentialsId: 'npm-publish-token', variable: 'NPM_TOKEN')]) {
                     sh "npm publish"
                 }
