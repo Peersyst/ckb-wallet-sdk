@@ -26,5 +26,5 @@ main();
 ```
 
 {% hint style="info" %}
-There are other methods to access information about the DAO. You can see them in the [documentation](../walletservice/dao-methods.md).
+There are other methods to access information about the DAO. You can see them in the [documentation](../../services-documentation/walletservice/dao-methods.md).
 {% endhint %}
