@@ -32,5 +32,5 @@ main();
 ```
 
 {% hint style="info" %}
-If you want the balance of for example only ckb or only tokens or only nfts, we have dedicated functions as you can see in our [documentation](../../services-documentation/walletservice/).
+If you want the balance of for example only ckb or only tokens or only nfts, we have dedicated functions as you can see in our [documentation](../walletservice/).
 {% endhint %}

@@ -26,5 +26,5 @@ main();
 ```
 
 {% hint style="info" %}
-Unlockable amounts are used to either withdraw and unlock from the DAO. To see the full documentation on the type go [here](../../services-documentation/walletservice/dao-methods.md).
+Unlockable amounts are used to either withdraw and unlock from the DAO. To see the full documentation on the type go [here](../walletservice/dao-methods.md).
 {% endhint %}
